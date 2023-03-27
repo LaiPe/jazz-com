@@ -11,6 +11,9 @@
 }
 
 body > header{
+    position: fixed;
+    top:0;
+    width: 100%;
     background-color: var(--c1);
     padding: 20px;
 }
@@ -24,7 +27,7 @@ body > header h4{
 
 body > nav{
     width: 50%;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 56px;
     margin: 0px auto;
@@ -70,11 +73,11 @@ body > nav a:hover{
 .sous a{
     padding: 10px;
     border-bottom: none;
-    background-color: var(--c3);
+    background-color: var(--c5);
 }
 .sous a:hover{
     border-bottom: none;
-    background-color: var(--c2);
+    background-color: var(--c3);
 }
 
 .deroulant > a::after{
@@ -82,10 +85,12 @@ body > nav a:hover{
     font-size: 12px;
 }
 
-main > header{
+.slide{
     width: 100%;
     height: calc(100vh - 96px);
-
+}
+main > header{
+    margin-top: 96px;
     display: flex;
     align-items: center;
     justify-content: center;
