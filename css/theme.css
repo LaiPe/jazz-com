@@ -8,6 +8,7 @@
     --c3: #CCC;
     --c4: rgba(200, 200, 200, 0.1);
     --c5: white;
+    --res: calc(0.01 * 10vmin);
     font-family: "Poppins";
     font-size: 12.5px;
 }
@@ -18,8 +19,6 @@ body > header{
     width: 100%;
     background-color: var(--c1);
     padding: 20px;
-    box-shadow:  16px 16px 32px #b8b8b8,
-             -16px -16px 32px #ffffff;
 }
 body > header h1{
     margin:0;
@@ -91,12 +90,19 @@ body > nav a:hover{
 
 .slide{
     width: 100%;
-    height: calc(100vh - 96px);
+    height: calc(100vh - 96px); 
+}
+main header.slide h2{
+    font-size: calc(80 * var(--res));
+    text-align: center;
 }
 main header.slide{
     margin-top: 96px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url(https://images.photowall.com/products/55981/that-jazz.jpg?h=699&q=85);
+    background-size: cover;
+    background-position: center;
 }
 
