@@ -6,7 +6,7 @@
     --c1: #8D7B68;
     --c2: #A4907C;
     --c3: #CCC;
-    --c4: rgba(200, 200, 200, 0.1);
+    --c4: rgba(255, 255, 255, 0.45);
     --c5: white;
     --res: calc(0.01 * 10vmin);
     font-family: "Poppins";
@@ -92,17 +92,25 @@ body > nav a:hover{
     width: 100%;
     height: calc(100vh - 96px); 
 }
-main header.slide h2{
-    font-size: calc(80 * var(--res));
-    text-align: center;
-}
 main header.slide{
     margin-top: 96px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     background-size: cover;
     background-position: center;
+}
+main header.slide h2{
+    font-size: calc(80 * var(--res));
+    text-align: center;
+}
+main header.slide h3{
+    font-size: calc(20 * var(--res));
+    text-align: center;
+}
+main header .titre{
+    background-color: var(--c4);
+    padding: 7vmin;
 }
 
