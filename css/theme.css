@@ -101,7 +101,7 @@ main header.slide{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(https://images.photowall.com/products/55981/that-jazz.jpg?h=699&q=85);
+    
     background-size: cover;
     background-position: center;
 }
