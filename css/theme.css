@@ -4,7 +4,7 @@
 }
 :root{
     --c1: #6e3c2a;
-    --c2: #A4907C;
+    --c2: #794532;
     --c3: #CCC;
     --c4: rgba(255, 255, 255, 0.45);
     --c5: white;
@@ -22,28 +22,28 @@ body > header{
     background-color: var(--c1);
     height: var(--hheader);
 }
-body > header .titre{
+.titre{
     position: absolute;
     top: 20px;
     left:15px;
 }
 
-header > nav{
+nav.full{
     width: 50%;
     position: absolute;
     bottom: 0px;
     right: 0px;
 }
-header > nav ul{
+nav ul{
     list-style-type: none;
 }
-header > nav li{
+nav.full li{
     position: relative;
     float: left;
     width: calc(100% / 3);
     text-align: center;
 }
-header > nav a{
+nav.full a{
     display: block;
     text-decoration: none;
     color: black;
@@ -51,37 +51,88 @@ header > nav a{
     padding: 10px 0px;
     background-color: var(--c1);
 }
-header > nav a:hover{
+nav.full a:hover{
     color: orange;
     border-bottom: 2px solid gold;
 }
 
-.sous{
+nav.full .sous{
     position: absolute;
     width: 100%;
     display: none;
     background-color: red;
 }
-.deroulant:hover .sous{
+nav.full .deroulant:hover .sous{
     display: block;
 }
-.sous li{
+nav.full .sous li{
     float: none;
     width: 100%;
     text-align: left;
 }
-.sous a{
+nav.full .sous a{
     padding: 10px;
     border-bottom: none;
     background-color: var(--c5);
 }
-.sous a:hover{
+nav.full .sous a:hover{
     border-bottom: none;
     background-color: var(--c3);
 }
-.deroulant > a::after{
+nav.full .deroulant > a::after{
     content:"▼";
     font-size: 12px;
+}
+
+nav.mini label, nav.mini input#activmini{
+    display: none;  
+}
+nav.mini ul{
+    display: none;
+}
+
+@media all and (max-width: 800px){
+    .titre{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .titre h4 {
+        display: none;
+    }
+    nav.full{
+        display: none;
+    }
+    nav.mini > label {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        left: 5%;
+        transform: translate(-5%, -50%);
+        font-size: 25px;
+    }
+    nav.mini #activmini:checked + ul {
+        display: block;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background-color: var(--c1);
+        text-align: center;
+    }
+    nav.mini #activmini:checked + ul li{
+        border-top: 1px solid black;
+        padding: 10px 0px;
+        margin: 0px 5%;
+    }
+    nav.mini #activmini:checked + ul li a{
+        color: black;
+        text-decoration: none;
+    }
+    nav.mini #activmini:checked + ul li a:hover{
+        color: orange;
+    }
 }
 
 .slide{
@@ -111,8 +162,3 @@ header.slide .vignette{
     font-size: calc(40 * var(--res));
 }
 
-@media all and (max-width: 800px){
-    body > header h4 {
-        display: none;
-    }
-}
