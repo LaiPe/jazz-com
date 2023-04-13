@@ -20,13 +20,6 @@ body > header{
     background-color: var(--c1);
     padding: 20px;
 }
-body > header h1{
-    margin:0;
-}
-body > header h4{
-    margin:0;
-}
-
 
 body > nav{
     width: 50%;
@@ -82,7 +75,6 @@ body > nav a:hover{
     border-bottom: none;
     background-color: var(--c3);
 }
-
 .deroulant > a::after{
     content:"▼";
     font-size: 12px;
@@ -92,7 +84,7 @@ body > nav a:hover{
     width: 100%;
     height: calc(100vh - 96px); 
 }
-main header.slide{
+header.slide{
     margin-top: 96px;
     display: flex;
     align-items: center;
@@ -100,16 +92,18 @@ main header.slide{
     background-size: cover;
     background-position: center;
 }
-main header.slide h2{
-    font-size: calc(80 * var(--res));
-    text-align: center;
-}
-main header.slide h3{
-    font-size: calc(20 * var(--res));
-    text-align: center;
-}
-main header .titre{
+header.slide .titre{
     background-color: var(--c4);
     padding: 7vmin;
+    text-align: center;
+}
+.titre h2{
+    font-size: calc(80 * var(--res));
+}
+.titre h3{
+    font-size: calc(20 * var(--res));
+}
+#index h2{
+    font-size: calc(40 * var(--res));
 }
 
