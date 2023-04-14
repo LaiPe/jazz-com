@@ -1,0 +1,73 @@
+/*Pour les pages artistes.html et styles.html*/
+main > header{
+    text-align: center;
+    padding: 30px 0px 20px 0px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-bottom: 1px solid var(--c3);
+}
+main > nav ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 1300px;
+    margin: 70px auto 0;
+}
+main > nav li {
+    border: 1px solid var(--c3); border-radius: 5px;
+    width: 50vmin;
+    height: 30vmin;
+    margin: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+main > nav li a{
+    color: black;
+    text-decoration: none;
+    background-color: var(--c4b);
+    padding: 10px;
+}
+main > nav li a:hover{
+    animation-duration: 1s;
+    animation-name: zoom;
+    animation-fill-mode: forwards;
+    text-decoration: underline;
+}
+@keyframes zoom{
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+main > nav li#louis-armstrong{
+    background-image: url(../img/louis-armstrong.jpg);
+}
+main > nav li#duke-ellington{
+    background-image: url(../img/duke-ellington.jpg);
+}
+main > nav li#charlie-parker{
+    background-image: url(../img/charlie-parker.jpg);
+}
+main > nav li#stan-getz{
+    background-image: url(../img/stan-getz.jpg);
+}
+
+main > nav li#new-orleans{
+    background-image: url(../img/new-orleans.jpg);
+}
+main > nav li#swing{
+    background-image: url(../img/swing.jpg);
+}
+main > nav li#be-bop{
+    background-image: url(../img/be-bop.jpg);
+}
+main > nav li#bossa-nova{
+    background-image: url(../img/bossa-nova.jpg);
+}

@@ -6,7 +6,9 @@
     --c1: #6e3c2a;
     --c2: #794532;
     --c3: #CCC;
+    --c3b: #f0f0f0;
     --c4: rgba(255, 255, 255, 0.45);
+    --c4b: rgba(255, 255, 255, 0.65);
     --c5: white;
     --res: calc(0.01 * 10vmin);
     --hheader: 100px;
@@ -60,7 +62,6 @@ nav.full .sous{
     position: absolute;
     width: 100%;
     display: none;
-    background-color: red;
 }
 nav.full .deroulant:hover .sous{
     display: block;
@@ -73,7 +74,7 @@ nav.full .sous li{
 nav.full .sous a{
     padding: 10px;
     border-bottom: none;
-    background-color: var(--c5);
+    background-color: var(--c3b);
 }
 nav.full .sous a:hover{
     border-bottom: none;
@@ -135,12 +136,14 @@ nav.mini ul{
     }
 }
 
+main header{
+    margin-top: var(--hheader);
+}
 .slide{
     width: 100%;
     height: calc(100vh - var(--hheader)); 
 }
 header.slide{
-    margin-top: var(--hheader);
     display: flex;
     align-items: center;
     justify-content: center;
