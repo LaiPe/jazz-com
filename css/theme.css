@@ -97,7 +97,6 @@ nav.mini ul{
 @media all and (max-width: 1000px){
     :root{
         --hheader: 10vh;
-        font-size: 13.5px;
     }
     body > header h1{
         font-size: calc(55 * var(--res));
