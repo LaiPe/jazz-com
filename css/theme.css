@@ -95,6 +95,12 @@ nav.mini ul{
 }
 
 @media all and (max-width: 1000px){
+    :root{
+        --hheader: 10vh;
+    }
+    body > header h1{
+        font-size: calc(55 * var(--res));
+    }
     .titre{
         position: absolute;
         top: 50%;
@@ -114,7 +120,7 @@ nav.mini ul{
         top: 50%;
         left: 5%;
         transform: translate(-5%, -50%);
-        font-size: 25px;
+        font-size: calc(55 * var(--res));
     }
     nav.mini #activmini:checked + ul {
         display: block;
@@ -126,7 +132,8 @@ nav.mini ul{
     }
     nav.mini #activmini:checked + ul li{
         border-top: 1px solid black;
-        padding: 10px 0px;
+        font-size: calc(40 * var(--res));
+        padding: 1em 0px;
         margin: 0px 5%;
     }
     nav.mini #activmini:checked + ul li a{
