@@ -19,3 +19,19 @@ article > section#intro{
     font-style: italic;
     padding-top: 60px;
 }
+@media all and (max-width: 1000px){
+    article > aside{
+        position:relative;
+        float: none;
+        width: 100%;
+        top:0;
+        padding: 30px;
+    }
+    article > section{
+        width: 100%;
+        padding: 20px 50px 20px 30px;
+    }
+    article > section#intro{
+        padding-top: 0px;
+    }
+}
