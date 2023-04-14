@@ -5,6 +5,7 @@ article > aside {
     top: var(--hheader);
     float: right; 
     width: 50%;
+    height:0;
 }   
 article > aside iframe {
     left:0; 
@@ -23,3 +24,32 @@ article > section#intro{
     font-style: italic;
     padding-top: 60px;
 }
+@media all and (max-width: 1000px){
+    article > aside{
+        padding-bottom:56.25%; 
+        position:relative;
+        float: none;
+        width: 100%;
+        top:0;
+    }
+    article > section{
+        width: 100%;
+    }
+    article > section#intro{
+        padding-top: 40px;
+    }
+}
+/*.video-responsive { 
+    overflow:hidden; 
+    padding-bottom:56.25%; 
+    position:relative; 
+    height:0;
+    }
+    
+    .video-responsive iframe {
+    left:0; 
+    top:0; 
+    height:100%;
+    width:100%;
+    position:absolute;
+    }*/
