@@ -1,0 +1,25 @@
+article > aside { 
+    overflow:hidden; 
+    padding-bottom:calc(100vh - var(--hheader)); 
+    position:sticky;
+    top: var(--hheader);
+    float: right; 
+    width: 50%;
+}   
+article > aside iframe {
+    left:0; 
+    top:0; 
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+article > section{
+    width: 50%;
+    text-align: justify;
+    padding: 20px 50px 20px 30px;
+}
+article > section#intro{
+    font-style: italic;
+    padding-top: 60px;
+}
