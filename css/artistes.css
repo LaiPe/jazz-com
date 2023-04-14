@@ -1,0 +1,21 @@
+article > aside{
+    width: 40%;
+    position: sticky;
+    top: var(--hheader);
+    padding: 60px 60px 30px 20px;
+    float: right;
+    text-align: justify;
+    z-index: 1;
+}
+article > aside li{
+    margin: 10px 20px;
+}
+article > section{
+    width: 60%;
+    text-align: justify;
+    padding: 20px 30px;
+}
+article > section#intro{
+    font-style: italic;
+    padding-top: 60px;
+}

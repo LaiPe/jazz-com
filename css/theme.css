@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 :root{
     --c1: #6e3c2a;
@@ -23,6 +24,7 @@ body > header{
     width: 100%;
     background-color: var(--c1);
     height: var(--hheader);
+    z-index: 10;
 }
 .titre{
     position: absolute;
@@ -92,7 +94,7 @@ nav.mini ul{
     display: none;
 }
 
-@media all and (max-width: 800px){
+@media all and (max-width: 1000px){
     .titre{
         position: absolute;
         top: 50%;
