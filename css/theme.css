@@ -14,7 +14,7 @@
     --res: calc(0.01 * 10vmin);
     --hheader: 10vh;
     font-family: "Poppins", helvetica, arial, sans-serif;
-    font-size: calc(17 * var(--res));
+    font-size: 12.5px;
 
 }
 
@@ -57,6 +57,7 @@ nav.full a{
     display: block;
     text-decoration: none;
     color: black;
+    font-size: calc(17 * var(--res));
     border-bottom: 0.2rem solid transparent;
     padding: 2% 0;
     background-color: var(--c1);
