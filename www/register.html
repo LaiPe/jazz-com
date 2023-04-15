@@ -53,7 +53,31 @@
             <header>
                 <h2>S'inscrire</h2>
             </header>
-            <form action="#">
+            <form action="htbin/register.py">
+                <fieldset><legend>Informations Personelles</legend>
+                    <label>Nom de Famille:
+                        <input name="lastname" type="text" required>
+                    </label>
+                    <label>Prénom:
+                        <input name="firstname" type="text" required>
+                    </label>
+                    <label>Date de Naissance:
+                        <input name="birthdate" type="text" placeholder="jj/mm/aaaa">
+                    </label>
+                </fieldset>
+
+                <fieldset><legend>Informations de Compte</legend>
+                    <label>Nom d'Utilisateur:
+                        <input name="username" type="text" required>
+                    </label>
+                    <label>Adresse email:
+                        <input name="username" type="email" required>
+                    </label>
+                    <label>Mot de passe:
+                        <input name="userpwd" required type="password"/>
+                    </label>
+                </fieldset>
+                <input type="submit" value="Valider"/>
             </form>
         </main>
     </body>
