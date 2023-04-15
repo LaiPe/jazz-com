@@ -1,10 +1,11 @@
 /*Pour les pages artistes.html et styles.html*/
 main > header{
     text-align: center;
-    padding: 30px 0px 20px 0px;
+    padding: 1.5% 0;
     margin-left: 30%;
     margin-right: 30%;
-    border-bottom: 1px solid var(--c3);
+    border-bottom: 0.01rem solid var(--c3);
+    font-size: calc(40 * var(--res));
 }
 main > nav ul{
     display: flex;
@@ -14,10 +15,10 @@ main > nav ul{
     margin: 2% auto 0;
 }
 main > nav li {
-    border: 1px solid var(--c3);
+    border: 0.01rem solid var(--c3);
     width: 50vmin;
     height: 30vmin;
-    margin: 10px;
+    margin: 1.5%;
     overflow: hidden;
     flex-shrink: 0;
 
