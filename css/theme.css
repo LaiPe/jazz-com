@@ -12,9 +12,9 @@
     --c4b: rgba(255, 255, 255, 0.65);
     --c5: white;
     --res: calc(0.01 * 10vmin);
-    --hheader: 100px;
+    --hheader: 10vh;
     font-family: "Poppins", helvetica, arial, sans-serif;
-    font-size: 12.5px;
+    font-size: calc(17 * var(--res));
 
 }
 
@@ -26,17 +26,23 @@ body > header{
     height: var(--hheader);
     z-index: 10;
 }
+body > header h1{
+    font-size: calc(40 * var(--res));
+}
+body > header h4{
+    font-size: calc(15 * var(--res));
+}
 .titre{
     position: absolute;
-    top: 20px;
-    left:15px;
+    top: 5%;
+    left: 1.5%;
 }
 
 nav.full{
     width: 50%;
     position: absolute;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0;
+    right: 0;
 }
 nav ul{
     list-style-type: none;
@@ -51,13 +57,13 @@ nav.full a{
     display: block;
     text-decoration: none;
     color: black;
-    border-bottom: 2px solid transparent;
-    padding: 10px 0px;
+    border-bottom: 0.2rem solid transparent;
+    padding: 2% 0;
     background-color: var(--c1);
 }
 nav.full a:hover{
     color: orange;
-    border-bottom: 2px solid gold;
+    border-bottom: 0.2rem solid gold;
 }
 
 nav.full .sous{
@@ -74,7 +80,7 @@ nav.full .sous li{
     text-align: left;
 }
 nav.full .sous a{
-    padding: 10px;
+    padding: 4%;
     border-bottom: none;
     background-color: var(--c3b);
 }
@@ -84,7 +90,6 @@ nav.full .sous a:hover{
 }
 nav.full .deroulant > a::after{
     content:"▼";
-    font-size: 12px;
 }
 
 nav.mini label, nav.mini input#activmini{
@@ -94,10 +99,7 @@ nav.mini ul{
     display: none;
 }
 
-@media all and (max-width: 1000px){
-    :root{
-        --hheader: 10vh;
-    }
+@media all and (max-width: 1080px){
     body > header h1{
         font-size: calc(55 * var(--res));
     }
@@ -131,10 +133,10 @@ nav.mini ul{
         text-align: center;
     }
     nav.mini #activmini:checked + ul li{
-        border-top: 1px solid black;
+        border-top: 0.01rem solid black;
         font-size: calc(40 * var(--res));
-        padding: 1em 0px;
-        margin: 0px 5%;
+        padding: 1em 0;
+        margin: 0 5%;
     }
     nav.mini #activmini:checked + ul li a{
         color: black;
