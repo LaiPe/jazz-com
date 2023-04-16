@@ -14,11 +14,26 @@
     </head>
     <body>
         <header>
-            <div class="titre">
+            <div id="titre">
                 <h1>Jazz.com</h1>
                 <h4>une petite histoire du jazz...</h4>
             </div>
-            <nav class="full">
+            <nav id="compte">
+                <ul>
+                    <li><a>Se connecter</a></li>
+                    <li><a href="../formulaires/register.html">S'inscrire</a></li>
+                    <li><img src="../img/default-profile-icon.jpg"></li>
+                </ul>
+            </nav>
+            <nav id="compte-mini">
+                <label for="activcomptemini"><img src="../img/default-profile-icon.jpg"></label>
+                <input type="checkbox" id="activcomptemini">
+                <ul>
+                    <li><a>Se connecter</a></li>
+                    <li><a href="../formulaires/register.html">S'inscrire</a></li>
+                    <li><a>Mon compte</a></li>
+            </nav>
+            <nav id="full">
                 <ul>
                     <li>
                         <a href="../index.html">Accueil &ensp;</a>
@@ -43,7 +58,7 @@
                     </li>
                 </ul>
             </nav>
-            <nav class="mini">
+            <nav id="mini">
                 <label for="activmini">☰</label>
                 <input type="checkbox" id="activmini">
                 <ul>
@@ -52,6 +67,7 @@
                     <li><a href="../styles.html">Styles</a></li>
                 </ul>
             </nav>
+            <script src="../js/navs.js"></script>
         </header>
 
         <main>
