@@ -12,7 +12,7 @@
     --c4b: rgba(255, 255, 255, 0.65);
     --c5: white;
     --res: calc(0.01 * 10vmin);
-    --hheader: 10vh;
+    --hheader: 15vh;
     font-family: "Poppins", helvetica, arial, sans-serif;
     font-size: 12.5px;
 
@@ -32,13 +32,13 @@ body > header h1{
 body > header h4{
     font-size: calc(15 * var(--res));
 }
-.titre{
+header > #titre{
     position: absolute;
-    top: 5%;
+    top: 20%;
     left: 1.5%;
 }
 
-nav.full{
+nav#full{
     width: 50%;
     position: absolute;
     bottom: 0;
@@ -47,13 +47,13 @@ nav.full{
 nav ul{
     list-style-type: none;
 }
-nav.full li{
+nav#full li{
     position: relative;
     float: left;
     width: calc(100% / 3);
     text-align: center;
 }
-nav.full a{
+nav#full a{
     display: block;
     text-decoration: none;
     color: black;
@@ -62,41 +62,64 @@ nav.full a{
     padding: 2% 0;
     background-color: var(--c1);
 }
-nav.full a:hover{
+nav#full a:hover{
     color: orange;
     border-bottom: 0.2rem solid gold;
 }
 
-nav.full .sous{
+nav#full .sous{
     position: absolute;
     width: 100%;
     display: none;
 }
-nav.full .deroulant:hover .sous{
+nav#full .deroulant:hover .sous{
     display: block;
 }
-nav.full .sous li{
+nav#full .sous li{
     float: none;
     width: 100%;
     text-align: left;
 }
-nav.full .sous a{
+nav#full .sous a{
     padding: 4%;
     border-bottom: none;
     background-color: var(--c3b);
 }
-nav.full .sous a:hover{
+nav#full .sous a:hover{
     border-bottom: none;
     background-color: var(--c3);
 }
-nav.full .deroulant > a::after{
+nav#full .deroulant > a::after{
     content:"▼";
 }
 
-nav.mini label, nav.mini input#activmini{
+nav#compte {
+    position: absolute;
+    top:10%; right:1.5%;
+    width: 20%;
+}
+nav#compte ul{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+nav#compte li{
+    margin: 0 2.5%
+}
+nav#compte li img{
+    width: calc(40 * var(--res));
+    border: 2px black solid;
+}
+nav#compte li a{
+    color: black;
+    text-decoration: underline;
+    font-size: calc(17 * var(--res));
+}
+
+nav#mini label, nav#mini input#activmini{
     display: none;  
 }
-nav.mini ul{
+nav#mini ul{
     display: none;
 }
 
@@ -113,10 +136,10 @@ nav.mini ul{
     .titre h4 {
         display: none;
     }
-    nav.full{
+    nav#full{
         display: none;
     }
-    nav.mini > label {
+    nav#mini > label {
         display: block;
         position: absolute;
         cursor: pointer;
@@ -125,7 +148,7 @@ nav.mini ul{
         transform: translate(-5%, -50%);
         font-size: calc(55 * var(--res));
     }
-    nav.mini #activmini:checked + ul {
+    nav#mini #activmini:checked + ul {
         display: block;
         position: absolute;
         top: 100%;
@@ -133,17 +156,17 @@ nav.mini ul{
         background-color: var(--c1);
         text-align: center;
     }
-    nav.mini #activmini:checked + ul li{
+    nav#mini #activmini:checked + ul li{
         border-top: 0.01rem solid black;
         font-size: calc(40 * var(--res));
         padding: 1em 0;
         margin: 0 5%;
     }
-    nav.mini #activmini:checked + ul li a{
+    nav#mini #activmini:checked + ul li a{
         color: black;
         text-decoration: none;
     }
-    nav.mini #activmini:checked + ul li a:hover{
+    nav#mini #activmini:checked + ul li a:hover{
         color: orange;
     }
 }
