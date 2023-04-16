@@ -96,6 +96,7 @@ nav#full .deroulant > a::after{
 nav#compte {
     position: absolute;
     top:10%; right:1.5%;
+    transform: translate(1.5%,10%);
     width: 20%;
 }
 nav#compte ul{
@@ -115,25 +116,25 @@ nav#compte li a{
     text-decoration: underline;
     font-size: calc(17 * var(--res));
 }
-
-nav#mini label, nav#mini input#activmini{
-    display: none;  
-}
-nav#mini ul{
+nav#compte-mini, nav#compte-mini input, nav#compte-mini ul{
     display: none;
 }
 
+nav#mini label, nav#mini input, nav#mini ul{
+    display: none;  
+}
+
 @media all and (max-width: 1080px){
-    body > header h1{
+    header > #titre h1{
         font-size: calc(55 * var(--res));
     }
-    .titre{
+    header > #titre{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
     }
-    .titre h4 {
+    header > #titre h4 {
         display: none;
     }
     nav#full{
@@ -148,7 +149,7 @@ nav#mini ul{
         transform: translate(-5%, -50%);
         font-size: calc(55 * var(--res));
     }
-    nav#mini #activmini:checked + ul {
+    nav#mini #activmini:checked + ul, nav#compte-mini #activcomptemini:checked + ul {
         display: block;
         position: absolute;
         top: 100%;
@@ -156,18 +157,37 @@ nav#mini ul{
         background-color: var(--c1);
         text-align: center;
     }
-    nav#mini #activmini:checked + ul li{
+    nav#mini #activmini:checked + ul li, nav#compte-mini #activcomptemini:checked + ul li{
         border-top: 0.01rem solid black;
         font-size: calc(40 * var(--res));
         padding: 1em 0;
         margin: 0 5%;
     }
-    nav#mini #activmini:checked + ul li a{
+    nav#mini #activmini:checked + ul li a, nav#compte-mini #activcomptemini:checked + ul li a{
         color: black;
         text-decoration: none;
     }
-    nav#mini #activmini:checked + ul li a:hover{
+    nav#mini #activmini:checked + ul li a:hover, nav#compte-mini #activcomptemini:checked + ul li a:hover{
         color: orange;
+    }
+
+    nav#compte{
+        display: none;
+    }
+    nav#compte-mini{
+        display: block;
+    }
+    nav#compte-mini > label {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        right: 5%;
+        transform: translate(5%, -50%);
+    }
+    nav#compte-mini > label img{
+        width: calc(50 * var(--res));
+        border: 2px black solid;
     }
 }
 
