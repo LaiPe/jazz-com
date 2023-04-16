@@ -2,6 +2,9 @@ form{
     max-width: 80%;
     margin: 5% auto;
 }
+form#loginForm{
+    max-width: 35%;
+}
 form > fieldset{
     margin: 2% 0%;
     padding: 2%;
@@ -10,6 +13,9 @@ form > fieldset{
 }
 form > fieldset > label{
     margin: 0.5% 2%
+}
+form > fieldset > label > input{
+    margin-left: 10px;
 }
 form label{
     margin: 0 3%;
